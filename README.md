@@ -12,6 +12,7 @@ RandJoke is a Chrome extension that delivers a daily dose of laughter right to y
 - 🤣 Receive a random joke Every click
 - 💻 Lightweight and easy to use
 - 🌐 Works seamlessly in Chrome
+- ✈ Offline functionality
 
 ## Installation
 
