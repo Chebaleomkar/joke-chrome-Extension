@@ -1,7 +1,7 @@
 const joke = document.getElementById('joke');
 const tag = document.getElementById('tag');
 const punch = document.getElementById('punch');
-
+const shareBtn = document.getElementById('share'); // Corrected the variable name
 const apiUrl = 'https://official-joke-api.appspot.com/random_joke';
 
 function fetchJoke() {
@@ -17,7 +17,6 @@ function fetchJoke() {
     })
     .catch(error => {
       console.error('Error fetching the joke:', error);
-      // If an error occurs (e.g., user is offline), use an offline joke
       const offlineJoke = getRandomOfflineJoke();
       displayJoke(offlineJoke);
     });
@@ -32,6 +31,8 @@ function displayJoke(data) {
 
   const punchLine = data.punchline;
   punch.textContent = punchLine;
+
+  shareBtn.disabled = false; 
 }
 
 function getRandomOfflineJoke() {
@@ -39,9 +40,25 @@ function getRandomOfflineJoke() {
   return offlineJokes[randomIndex];
 }
 
-// Call fetchJoke when the extension is loaded or when the user clicks a button
+
 fetchJoke();
 
+// share functionality 
+function shareOnWhatsApp(joke) {
+  let content = joke.setup + " "+ joke.punchline;
+  let whatsAppUrl = `whatsapp://send?text=` + (encodeURIComponent(content));
+  window.location.href = whatsAppUrl;
+}
+
+// Event listener for the share button
+shareBtn.addEventListener('click', function () { 
+  console.log('sharing ')
+    const currentJoke = {
+        setup: joke.textContent,
+        punchline: punch.textContent
+    };
+   shareOnWhatsApp(currentJoke);
+});
 
 // Offline array of jokes
 const offlineJokes = [
@@ -75,6 +92,4 @@ const offlineJokes = [
     "punchline": " Light blue.",
     "id": 270
   }
-
-
 ];

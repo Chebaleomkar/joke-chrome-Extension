@@ -1,43 +1,45 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
-    width: 600px;
-    height: 500px;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  width: 600px;
+  height: 500px;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+#share {
+  cursor: pointer;
 }
 
 #container {
-
-    text-align: center;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
-    margin: auto; /* Center the container */
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto; 
 }
 
 #tag {
-    font-size: 1em;
-    margin-bottom: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
 }
 
 #joke {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px; /* Increase space between joke and punchline */
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px; /* Increase space between joke and punchline */
 }
 
 #punch {
-    font-size: 1.4em;
-    color: #555;
+  font-size: 1.4em;
+  color: #555;
 }
 
 /* Optional: Add a subtle hover effect */
 #container:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
