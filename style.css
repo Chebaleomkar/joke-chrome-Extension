@@ -11,6 +11,7 @@ body {
 
 #share {
   cursor: pointer;
+  color: rgb(46, 172, 37);
 }
 
 #container {
@@ -20,6 +21,12 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: auto; 
+}
+
+.container2{
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
 }
 
 #tag {

@@ -1,7 +1,8 @@
 const joke = document.getElementById('joke');
 const tag = document.getElementById('tag');
 const punch = document.getElementById('punch');
-const shareBtn = document.getElementById('share'); // Corrected the variable name
+const shareBtn = document.getElementById('share'); 
+const reFetch = document.getElementById('reFetch');
 const apiUrl = 'https://official-joke-api.appspot.com/random_joke';
 
 function fetchJoke() {
@@ -42,6 +43,11 @@ function getRandomOfflineJoke() {
 
 
 fetchJoke();
+
+// refetch joke
+reFetch.addEventListener('click' , ()=>{
+   fetchJoke();
+})
 
 // share functionality 
 function shareOnWhatsApp(joke) {
