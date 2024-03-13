@@ -3,7 +3,7 @@ const tag = document.getElementById('tag');
 const punch = document.getElementById('punch');
 const shareBtn = document.getElementById('share'); 
 const reFetch = document.getElementById('reFetch');
-const apiUrl = 'https://official-joke-api.appspot.com/random_joke';
+const apiUrl = 'https://official-joke-api.appspot.com/random_joke' || 'https://official-joke-api.appspot.com/jokes/programming/random';
 
 function fetchJoke() {
   fetch(apiUrl)
